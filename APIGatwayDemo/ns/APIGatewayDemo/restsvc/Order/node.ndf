@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">restResource</value>
+  <value name="node_subtype">unknown</value>
+  <value name="node_nsName">APIGatewayDemo.restsvc:Order</value>
+  <value name="node_pkg">APIGatwayDemo</value>
+  <value name="node_comment"></value>
+  <value name="is_public">false</value>
+  <record name="restResource" javaclass="com.wm.util.Values">
+    <value name="resourceName">Order</value>
+    <value name="nsName">APIGatewayDemo.restsvc:Order</value>
+    <array name="operations" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">/order/{orderId}</value>
+        <value name="serviceName">APIGatewayDemo.restsvc:getOrder</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>GET</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">/order</value>
+        <value name="serviceName">APIGatewayDemo.restsvc:saveOrder</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>POST</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">/order/{orderId}</value>
+        <value name="serviceName">APIGatewayDemo.restsvc:deleteOrder</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>DELETE</value>
+        </array>
+      </record>
+    </array>
+  </record>
+  <null name="originUri"/>
+  <value name="resourceName">Order</value>
+  <Boolean name="modifiable">true</Boolean>
+</Values>
