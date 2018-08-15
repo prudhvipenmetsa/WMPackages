@@ -8,6 +8,9 @@
             <expected>
                 <file filename="resources\test\data\APIGatewayDemo_restsvc_saveOrder_pipeout_18073012443024552.xml"/>
             </expected>
+            <comparator validatorType="use-field-alias">
+                <field-aliases/>
+            </comparator>
         </service>
     </webMethodsTestCase>
 </webMethodsTestSuite>
