@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">interface</value>
+  <value name="node_subtype">unknown</value>
+  <value name="node_nsName">TelefonicaCustomerAPI.tcdb.javaSvcs</value>
+  <value name="is_public">false</value>
+  <value name="shared">cHVibGljIHN0YXRpYyAgRGF0YXNldE1hbmFnZXIgZGF0YXNldE1hbmFnZXI7CnByaXZhdGUgc3Rh
+dGljIGZpbmFsIFN0cmluZ0NlbGxEZWZpbml0aW9uIEZOQU1FID0gQ2VsbERlZmluaXRpb24uZGVm
+aW5lU3RyaW5nKCJmaXJzdE5hbWUiKTsKcHJpdmF0ZSBzdGF0aWMgZmluYWwgU3RyaW5nQ2VsbERl
+ZmluaXRpb24gTE5BTUUgPSBDZWxsRGVmaW5pdGlvbi5kZWZpbmVTdHJpbmcoImxhc3ROYW1lIik7
+CnByaXZhdGUgc3RhdGljIGZpbmFsIFN0cmluZ0NlbGxEZWZpbml0aW9uIEVNQUlMID0gQ2VsbERl
+ZmluaXRpb24uZGVmaW5lU3RyaW5nKCJlbWFpbCIpOwpwcml2YXRlIHN0YXRpYyBmaW5hbCBTdHJp
+bmdDZWxsRGVmaW5pdGlvbiBNUEhPTkUgPSBDZWxsRGVmaW5pdGlvbi5kZWZpbmVTdHJpbmcoIm1v
+YmlsZVBob25lIik7CnByaXZhdGUgc3RhdGljIGZpbmFsIFN0cmluZ0NlbGxEZWZpbml0aW9uIEhQ
+SE9ORSA9IENlbGxEZWZpbml0aW9uLmRlZmluZVN0cmluZygiaG9tZVBob25lIik7CnByaXZhdGUg
+c3RhdGljIGZpbmFsIFN0cmluZ0NlbGxEZWZpbml0aW9uIEFERFIxID0gQ2VsbERlZmluaXRpb24u
+ZGVmaW5lU3RyaW5nKCJhZGRyZXNzMSIpOwpwcml2YXRlIHN0YXRpYyBmaW5hbCBTdHJpbmdDZWxs
+RGVmaW5pdGlvbiBBRERSMiA9IENlbGxEZWZpbml0aW9uLmRlZmluZVN0cmluZygiYWRkcmVzczIi
+KTsKcHJpdmF0ZSBzdGF0aWMgZmluYWwgU3RyaW5nQ2VsbERlZmluaXRpb24gQ0lUWSA9IENlbGxE
+ZWZpbml0aW9uLmRlZmluZVN0cmluZygiY2l0eSIpOwpwcml2YXRlIHN0YXRpYyBmaW5hbCBTdHJp
+bmdDZWxsRGVmaW5pdGlvbiBTVCA9IENlbGxEZWZpbml0aW9uLmRlZmluZVN0cmluZygic3RhdGUi
+KTsKcHJpdmF0ZSBzdGF0aWMgZmluYWwgU3RyaW5nQ2VsbERlZmluaXRpb24gWklQID0gQ2VsbERl
+ZmluaXRpb24uZGVmaW5lU3RyaW5nKCJ6aXAiKTsKcHVibGljIHN0YXRpYyBEYXRhc2V0TWFuYWdl
+ciBnZXREYXRhc2V0TWFuYWdlcigpIHRocm93cyBVUklTeW50YXhFeGNlcHRpb24sU2VydmljZUV4
+Y2VwdGlvbixTdG9yZUV4Y2VwdGlvbnsKCWlmKGRhdGFzZXRNYW5hZ2VyIT1udWxsICkgcmV0dXJu
+IGRhdGFzZXRNYW5hZ2VyOwoJU3RyaW5nIHRjVVJMID0gU3lzdGVtLmdldFByb3BlcnR5KCJ3YXR0
+LnRjZGIuY3VzdG9tZXIudXJpIik7CglpZih0Y1VSTCA9PSBudWxsIHx8ICF0Y1VSTC5zdGFydHNX
+aXRoKCJ0ZXJyYWNvdHRhIikpICB0aHJvdyBuZXcgU2VydmljZUV4Y2VwdGlvbigiVENEQiBVUkwg
+aXMgbm90IGNvbmZpZ3VyZWQgaW4gZXh0ZW5kZWQgc2V0dGluZ3Mgd2F0dC50Y2RiLmN1c3RvbWVy
+LnVyaSBwcm9wZXJ0eSIpOwoJamF2YS5uZXQuVVJJIGNsdXN0ZXJVcmkgPSBuZXcgamF2YS5uZXQu
+VVJJKHRjVVJMKTsKICAgIHJldHVybgoJCQlEYXRhc2V0TWFuYWdlci5jbHVzdGVyZWQoY2x1c3Rl
+clVyaSkud2l0aENvbm5lY3Rpb25UaW1lb3V0KDMwMCxUaW1lVW5pdC5TRUNPTkRTKS5idWlsZCgp
+IDsKCgoJCQoJCS8vIGRhdGFzZXRNYW5hZ2VyLmRlc3Ryb3lEYXRhc2V0KFNUT1JFX05BTUUpOwp9
+</value>
+  <value name="encodeutf8">true</value>
+  <value name="extends"></value>
+  <array name="implements" type="value" depth="1">
+  </array>
+  <array name="imports" type="value" depth="1">
+    <value>java.net.URISyntaxException</value>
+    <value>java.util.Optional</value>
+    <value>java.util.concurrent.TimeUnit</value>
+    <value>com.terracottatech.store.Dataset</value>
+    <value>com.terracottatech.store.DatasetWriterReader</value>
+    <value>com.terracottatech.store.Record</value>
+    <value>com.terracottatech.store.StoreException</value>
+    <value>com.terracottatech.store.definition.CellDefinition</value>
+    <value>com.terracottatech.store.definition.StringCellDefinition</value>
+    <value>com.terracottatech.store.manager.DatasetManager</value>
+  </array>
+</Values>
