@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <record name="record" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_nsName">APIGatewayDemo.rad.contact2_.docTypes:person</value>
+    <value name="node_pkg">APIGatwayDemo</value>
+    <value name="is_public">false</value>
+    <value name="field_name">person</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="originURI">http://webm101.prudhvi.com:5555/rest/apigateway/apis/7fcd8c38-d364-4668-afb9-b69f226f2f92?format=swagger</value>
+    <null name="field_opt"/>
+    <null name="wrapper_type"/>
+    <value name="nillable">true</value>
+    <null name="field_xmlns"/>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">field</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">firstName</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <null name="field_opt"/>
+        <null name="wrapper_type"/>
+        <value name="nillable">true</value>
+        <null name="field_xmlns"/>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">field</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">lastName</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <null name="field_opt"/>
+        <null name="wrapper_type"/>
+        <value name="nillable">true</value>
+        <null name="field_xmlns"/>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">field</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">age</value>
+        <value name="field_type">object</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="wrapper_type">java.lang.Integer</value>
+        <value name="nillable">true</value>
+        <null name="field_xmlns"/>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+    <null name="rec_closed"/>
+    <null name="rec_sync_des"/>
+    <null name="schemaRegistered"/>
+    <value name="originURI">http://webm101.prudhvi.com:5555/rest/apigateway/apis/7fcd8c38-d364-4668-afb9-b69f226f2f92?format=swagger</value>
+    <value name="modifiable">false</value>
+    <null name="schemaCompliant"/>
+    <null name="elementWrapper"/>
+    <null name="wrappedElement"/>
+    <value name="LOCK_REQUIRED">false</value>
+  </record>
+</Values>

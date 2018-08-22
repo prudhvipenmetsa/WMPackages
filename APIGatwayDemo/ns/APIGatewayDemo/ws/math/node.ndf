@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">webServiceDescriptor</value>
+  <value name="node_subtype">unknown</value>
+  <value name="node_nsName">APIGatewayDemo.ws:math</value>
+  <value name="node_pkg">APIGatwayDemo</value>
+  <value name="is_public">false</value>
+  <Boolean name="inbound">true</Boolean>
+  <Boolean name="WSICompliant">false</Boolean>
+  <value name="SOAPProtocol">SOAP 1.1 Protocol</value>
+  <value name="targetNamespace">http://webm101.prudhvi.com/APIGatewayDemo.ws:math</value>
+  <Boolean name="attachmentEnabled">false</Boolean>
+  <number name="mtomThreshold" type="Integer">0</number>
+  <null name="externalWSDL"/>
+  <null name="externalWSDLURL"/>
+  <value name="WSDLURL">http://webm101.prudhvi.com:5555/ws/APIGatewayDemo.ws:math?WSDL</value>
+  <value name="definitionName">math</value>
+  <value name="version">V_10_2</value>
+  <null name="schemaDomain"/>
+  <Boolean name="rawArray">true</Boolean>
+  <array name="handlerList" type="record" depth="1">
+  </array>
+  <array name="binderList" type="record" depth="1">
+    <record javaclass="com.wm.util.Values">
+      <value name="binderName">APIGatewayDemo_ws_math_Binder</value>
+      <value name="bindingName">APIGatewayDemo_ws_math_Binder</value>
+      <value name="bindingStyle">document</value>
+      <value name="bindingUse">literal</value>
+      <value name="bindingType">SOAP</value>
+      <value name="portName">APIGatewayDemo_ws_math_Port</value>
+      <value name="portTypeName">math_PortType</value>
+      <value name="bindingTransport">http://schemas.xmlsoap.org/soap/http</value>
+      <value name="transportType">http</value>
+      <record name="operationMap" javaclass="com.wm.util.Values">
+        <value name="APIGatewayDemo_ws_math_Binder_addInts">addInts</value>
+        <value name="APIGatewayDemo_ws_math_Binder_addObjects">addObjects</value>
+        <value name="APIGatewayDemo_ws_math_Binder_roundNumber">roundNumber</value>
+        <value name="APIGatewayDemo_ws_math_Binder_addIntList">addIntList</value>
+        <value name="APIGatewayDemo_ws_math_Binder_toNumber">toNumber</value>
+        <value name="APIGatewayDemo_ws_math_Binder_divideInts">divideInts</value>
+        <value name="APIGatewayDemo_ws_math_Binder_multiplyInts">multiplyInts</value>
+        <value name="APIGatewayDemo_ws_math_Binder_max">max</value>
+        <value name="APIGatewayDemo_ws_math_Binder_multiplyObjects">multiplyObjects</value>
+        <value name="APIGatewayDemo_ws_math_Binder_multiplyFloatList">multiplyFloatList</value>
+        <value name="APIGatewayDemo_ws_math_Binder_subtractInts">subtractInts</value>
+        <value name="APIGatewayDemo_ws_math_Binder_divideFloats">divideFloats</value>
+        <value name="APIGatewayDemo_ws_math_Binder_multiplyFloats">multiplyFloats</value>
+        <value name="APIGatewayDemo_ws_math_Binder_absoluteValue">absoluteValue</value>
+        <value name="APIGatewayDemo_ws_math_Binder_subtractObjects">subtractObjects</value>
+        <value name="APIGatewayDemo_ws_math_Binder_randomDouble">randomDouble</value>
+        <value name="APIGatewayDemo_ws_math_Binder_divideObjects">divideObjects</value>
+        <value name="APIGatewayDemo_ws_math_Binder_min">min</value>
+        <value name="APIGatewayDemo_ws_math_Binder_addFloatList">addFloatList</value>
+        <value name="APIGatewayDemo_ws_math_Binder_multiplyIntList">multiplyIntList</value>
+        <value name="APIGatewayDemo_ws_math_Binder_subtractFloats">subtractFloats</value>
+        <value name="APIGatewayDemo_ws_math_Binder_addFloats">addFloats</value>
+      </record>
+      <value name="SOAPProtocol">SOAP 1.1 Protocol</value>
+      <value name="SOAPDirective">ws</value>
+      <Boolean name="useCSQ">false</Boolean>
+    </record>
+  </array>
+  <array name="operationList" type="record" depth="1">
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">absoluteValue</value>
+      <value name="serviceName">pub.math:absoluteValue</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">absoluteValueInput</value>
+          <value name="nsOwner">pub.math:absoluteValue</value>
+          <number name="nsOwnerType" type="Integer">1</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">absoluteValueOutput</value>
+          <value name="nsOwner">pub.math:absoluteValue</value>
+          <number name="nsOwnerType" type="Integer">2</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">addFloatList</value>
+      <value name="serviceName">pub.math:addFloatList</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">addFloatListInput</value>
+          <value name="nsOwner">pub.math:addFloatList</value>
+          <number name="nsOwnerType" type="Integer">1</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">addFloatListOutput</value>
+          <value name="nsOwner">pub.math:addFloatList</value>
+          <number name="nsOwnerType" type="Integer">2</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">addFloats</value>
+      <value name="serviceName">pub.math:addFloats</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">addFloatsInput</value>
+          <value name="nsOwner">pub.math:addFloats</value>
+          <number name="nsOwnerType" type="Integer">1</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">addFloatsOutput</value>
+          <value name="nsOwner">pub.math:addFloats</value>
+          <number name="nsOwnerType" type="Integer">2</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">addIntList</value>
+      <value name="serviceName">pub.math:addIntList</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">addIntListInput</value>
+          <value name="nsOwner">pub.math:addIntList</value>
+          <number name="nsOwnerType" type="Integer">1</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">addIntListOutput</value>
+          <value name="nsOwner">pub.math:addIntList</value>
+          <number name="nsOwnerType" type="Integer">2</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">addInts</value>
+      <value name="serviceName">pub.math:addInts</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">addIntsInput</value>
+          <value name="nsOwner">pub.math:addInts</value>
+          <number name="nsOwnerType" type="Integer">1</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">addIntsOutput</value>
+          <value name="nsOwner">pub.math:addInts</value>
+          <number name="nsOwnerType" type="Integer">2</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">addObjects</value>
+      <value name="serviceName">pub.math:addObjects</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">addObjects</value>
+          <value name="nsOwner">pub.math:addObjects</value>
+          <number name="nsOwnerType" type="Integer">1</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">addObjectsResponse</value>
+          <value name="nsOwner">pub.math:addObjects</value>
+          <number name="nsOwnerType" type="Integer">2</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">divideFloats</value>
+      <value name="serviceName">pub.math:divideFloats</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">divideFloatsInput</value>
+          <value name="nsOwner">pub.math:divideFloats</value>
+          <number name="nsOwnerType" type="Integer">1</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">divideFloatsOutput</value>
+          <value name="nsOwner">pub.math:divideFloats</value>
+          <number name="nsOwnerType" type="Integer">2</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">divideInts</value>
+      <value name="serviceName">pub.math:divideInts</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">divideIntsInput</value>
+          <value name="nsOwner">pub.math:divideInts</value>
+          <number name="nsOwnerType" type="Integer">1</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">divideIntsOutput</value>
+          <value name="nsOwner">pub.math:divideInts</value>
+          <number name="nsOwnerType" type="Integer">2</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">divideObjects</value>
+      <value name="serviceName">pub.math:divideObjects</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">divideObjects</value>
+          <value name="nsOwner">pub.math:divideObjects</value>
+          <number name="nsOwnerType" type="Integer">1</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">divideObjectsResponse</value>
+          <value name="nsOwner">pub.math:divideObjects</value>
+          <number name="nsOwnerType" type="Integer">2</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">max</value>
+      <value name="serviceName">pub.math:max</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">maxInput</value>
+          <value name="nsOwner">pub.math:max</value>
+          <number name="nsOwnerType" type="Integer">1</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">maxOutput</value>
+          <value name="nsOwner">pub.math:max</value>
+          <number name="nsOwnerType" type="Integer">2</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">min</value>
+      <value name="serviceName">pub.math:min</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">minInput</value>
+          <value name="nsOwner">pub.math:min</value>
+          <number name="nsOwnerType" type="Integer">1</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">minOutput</value>
+          <value name="nsOwner">pub.math:min</value>
+          <number name="nsOwnerType" type="Integer">2</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">multiplyFloatList</value>
+      <value name="serviceName">pub.math:multiplyFloatList</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">multiplyFloatListInput</value>
+          <value name="nsOwner">pub.math:multiplyFloatList</value>
+          <number name="nsOwnerType" type="Integer">1</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">multiplyFloatListOutput</value>
+          <value name="nsOwner">pub.math:multiplyFloatList</value>
+          <number name="nsOwnerType" type="Integer">2</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">multiplyFloats</value>
+      <value name="serviceName">pub.math:multiplyFloats</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">multiplyFloatsInput</value>
+          <value name="nsOwner">pub.math:multiplyFloats</value>
+          <number name="nsOwnerType" type="Integer">1</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">multiplyFloatsOutput</value>
+          <value name="nsOwner">pub.math:multiplyFloats</value>
+          <number name="nsOwnerType" type="Integer">2</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">multiplyIntList</value>
+      <value name="serviceName">pub.math:multiplyIntList</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">multiplyIntListInput</value>
+          <value name="nsOwner">pub.math:multiplyIntList</value>
+          <number name="nsOwnerType" type="Integer">1</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">multiplyIntListOutput</value>
+          <value name="nsOwner">pub.math:multiplyIntList</value>
+          <number name="nsOwnerType" type="Integer">2</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">multiplyInts</value>
+      <value name="serviceName">pub.math:multiplyInts</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">multiplyIntsInput</value>
+          <value name="nsOwner">pub.math:multiplyInts</value>
+          <number name="nsOwnerType" type="Integer">1</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">multiplyIntsOutput</value>
+          <value name="nsOwner">pub.math:multiplyInts</value>
+          <number name="nsOwnerType" type="Integer">2</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">multiplyObjects</value>
+      <value name="serviceName">pub.math:multiplyObjects</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">multiplyObjects</value>
+          <value name="nsOwner">pub.math:multiplyObjects</value>
+          <number name="nsOwnerType" type="Integer">1</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">multiplyObjectsResponse</value>
+          <value name="nsOwner">pub.math:multiplyObjects</value>
+          <number name="nsOwnerType" type="Integer">2</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">randomDouble</value>
+      <value name="serviceName">pub.math:randomDouble</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">randomDoubleInput</value>
+          <value name="nsOwner">pub.math:randomDouble</value>
+          <number name="nsOwnerType" type="Integer">1</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">randomDoubleOutput</value>
+          <value name="nsOwner">pub.math:randomDouble</value>
+          <number name="nsOwnerType" type="Integer">2</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">roundNumber</value>
+      <value name="serviceName">pub.math:roundNumber</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">roundNumberInput</value>
+          <value name="nsOwner">pub.math:roundNumber</value>
+          <number name="nsOwnerType" type="Integer">1</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">roundNumberOutput</value>
+          <value name="nsOwner">pub.math:roundNumber</value>
+          <number name="nsOwnerType" type="Integer">2</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">subtractFloats</value>
+      <value name="serviceName">pub.math:subtractFloats</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">subtractFloatsInput</value>
+          <value name="nsOwner">pub.math:subtractFloats</value>
+          <number name="nsOwnerType" type="Integer">1</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">subtractFloatsOutput</value>
+          <value name="nsOwner">pub.math:subtractFloats</value>
+          <number name="nsOwnerType" type="Integer">2</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">subtractInts</value>
+      <value name="serviceName">pub.math:subtractInts</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">subtractIntsInput</value>
+          <value name="nsOwner">pub.math:subtractInts</value>
+          <number name="nsOwnerType" type="Integer">1</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">subtractIntsOutput</value>
+          <value name="nsOwner">pub.math:subtractInts</value>
+          <number name="nsOwnerType" type="Integer">2</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">subtractObjects</value>
+      <value name="serviceName">pub.math:subtractObjects</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">subtractObjects</value>
+          <value name="nsOwner">pub.math:subtractObjects</value>
+          <number name="nsOwnerType" type="Integer">1</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">subtractObjectsResponse</value>
+          <value name="nsOwner">pub.math:subtractObjects</value>
+          <number name="nsOwnerType" type="Integer">2</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">toNumber</value>
+      <value name="serviceName">pub.math:toNumber</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">toNumberInput</value>
+          <value name="nsOwner">pub.math:toNumber</value>
+          <number name="nsOwnerType" type="Integer">1</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">toNumberOutput</value>
+          <value name="nsOwner">pub.math:toNumber</value>
+          <number name="nsOwnerType" type="Integer">2</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+  </array>
+  <record name="namespaces" javaclass="com.wm.util.Values">
+    <value name="tns">http://webm101.prudhvi.com/APIGatewayDemo.ws:math</value>
+    <value name="wsdl">http://schemas.xmlsoap.org/wsdl/</value>
+    <value name="xsd">http://www.w3.org/2001/XMLSchema</value>
+    <value name="http">http://schemas.xmlsoap.org/wsdl/http/</value>
+    <value name="mime">http://schemas.xmlsoap.org/wsdl/mime/</value>
+    <value name="soapenc">http://schemas.xmlsoap.org/soap/encoding/</value>
+    <value name="soap12">http://schemas.xmlsoap.org/wsdl/soap12/</value>
+    <value name="soap">http://schemas.xmlsoap.org/wsdl/soap/</value>
+    <value name="soapjms">http://www.w3.org/2010/soapjms/</value>
+  </record>
+  <Boolean name="HeadersInPipelineEnabled">false</Boolean>
+  <Boolean name="validateSOAPResponse">true</Boolean>
+  <Boolean name="validateSchemaUsingXerces">true</Boolean>
+  <Boolean name="enableCompatibility">false</Boolean>
+  <Boolean name="omitXSDAny">true</Boolean>
+  <Boolean name="registerDoctypes">false</Boolean>
+  <Boolean name="allTypes">false</Boolean>
+  <Boolean name="generateXOPObjectForBase64Binary">false</Boolean>
+  <null name="originURI"/>
+  <null name="modifiable"/>
+  <null name="policyAttachmentList"/>
+  <Boolean name="filterLoginCredentials">false</Boolean>
+</Values>

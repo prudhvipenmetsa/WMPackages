@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">restResource</value>
+  <value name="node_subtype">unknown</value>
+  <value name="node_nsName">APIGatewayDemo.implementswagger.customer_.resources:_default</value>
+  <value name="node_pkg">APIGatwayDemo</value>
+  <value name="is_public">false</value>
+  <record name="restResource" javaclass="com.wm.util.Values">
+    <value name="resourceName">_default</value>
+    <value name="nsName">APIGatewayDemo.implementswagger.customer_.resources:_default</value>
+    <array name="operations" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">/person/{id}</value>
+        <value name="serviceName">APIGatewayDemo.implementswagger.customer_.services:GET_person_svc1</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>GET</value>
+        </array>
+      </record>
+    </array>
+  </record>
+  <value name="originUri">http://webm101.prudhvi.com:5555/rest/apigateway/apis/7fcd8c38-d364-4668-afb9-b69f226f2f92?format=swagger</value>
+  <value name="resourceName">_default</value>
+  <Boolean name="modifiable">false</Boolean>
+</Values>

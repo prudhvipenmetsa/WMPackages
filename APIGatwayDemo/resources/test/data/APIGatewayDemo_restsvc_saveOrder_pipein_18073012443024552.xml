@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<IDataXMLCoder version="1.0">
+  <record javaclass="com.wm.data.ISMemDataImpl">
+    <record name="order" javaclass="com.wm.data.ISMemDataImpl">
+      <value name="orderId">3</value>
+      <value name="date">10-01-1977 10:00:00</value>
+      <array name="details" type="record" depth="1">
+        <record javaclass="com.wm.data.ISMemDataImpl">
+          <value name="item">1</value>
+          <value name="qty">100</value>
+        </record>
+      </array>
+    </record>
+  </record>
+</IDataXMLCoder>

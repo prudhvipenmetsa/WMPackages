@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webMethodsTestSuite description="" name="TestSuite">
+    <webMethodsTestCase description="This test case was created automatically using a wrapper" name="APIGatewayDemo.restsvc:saveOrder( 18073012443024552)">
+        <service folder="APIGatewayDemo.restsvc" name="saveOrder">
+            <input>
+                <file filename="resources\test\data\APIGatewayDemo_restsvc_saveOrder_pipein_18073012443024552.xml"/>
+            </input>
+            <expected>
+                <file filename="resources\test\data\APIGatewayDemo_restsvc_saveOrder_pipeout_18073012443024552.xml"/>
+            </expected>
+            <comparator validatorType="use-field-alias">
+                <field-aliases/>
+            </comparator>
+        </service>
+    </webMethodsTestCase>
+</webMethodsTestSuite>
