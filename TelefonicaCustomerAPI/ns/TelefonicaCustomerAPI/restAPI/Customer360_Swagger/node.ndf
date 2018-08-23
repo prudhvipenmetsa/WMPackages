@@ -41,8 +41,1030 @@
   <null name="swaggerUrl"/>
   <Boolean name="modifiable">true</Boolean>
   <record name="restResources" javaclass="com.wm.util.Values">
+    <record name="/getCustomer360" javaclass="com.wm.util.Values">
+      <value name="nsName">TelefonicaCustomerAPI.restAPI:Customer360</value>
+      <value name="path">/getCustomer360</value>
+      <null name="suffix"/>
+      <record name="operations" javaclass="com.wm.util.Values">
+        <record name="GET" javaclass="com.wm.util.Values">
+          <value name="operationType">GET</value>
+          <value name="nsName">/getCustomer360_GET</value>
+          <value name="description"></value>
+          <array name="requiredDefinitions" type="value" depth="1">
+            <value>TelefonicaCustomerAPI.docTypes:Status</value>
+            <value>TelefonicaCustomerAPI.docTypes:Customer360</value>
+            <value>/getCustomer360_GET.customer</value>
+            <value>/getCustomer360_GET.master</value>
+            <value>/getCustomer360_GET.address</value>
+            <value>/getCustomer360_GET.service</value>
+            <value>/getCustomer360_GET_$response</value>
+          </array>
+          <record name="parameters" javaclass="com.wm.util.Values">
+            <record name="CUST_NAME" javaclass="com.wm.util.Values">
+              <value name="name">CUST_NAME</value>
+              <value name="source">FORMDATA</value>
+              <value name="type">STRING</value>
+              <value name="description"></value>
+              <Boolean name="isRequired">true</Boolean>
+              <Boolean name="isArray">false</Boolean>
+              <null name="defaultValue"/>
+              <null name="refDefinition"/>
+              <null name="definitionName"/>
+              <Boolean name="includeInRad">true</Boolean>
+            </record>
+            <record name="CUST_ID" javaclass="com.wm.util.Values">
+              <value name="name">CUST_ID</value>
+              <value name="source">FORMDATA</value>
+              <value name="type">STRING</value>
+              <value name="description"></value>
+              <Boolean name="isRequired">true</Boolean>
+              <Boolean name="isArray">false</Boolean>
+              <null name="defaultValue"/>
+              <null name="refDefinition"/>
+              <null name="definitionName"/>
+              <Boolean name="includeInRad">true</Boolean>
+            </record>
+            <record name="ADDRESS_NAME" javaclass="com.wm.util.Values">
+              <value name="name">ADDRESS_NAME</value>
+              <value name="source">FORMDATA</value>
+              <value name="type">STRING</value>
+              <value name="description"></value>
+              <Boolean name="isRequired">true</Boolean>
+              <Boolean name="isArray">false</Boolean>
+              <null name="defaultValue"/>
+              <null name="refDefinition"/>
+              <null name="definitionName"/>
+              <Boolean name="includeInRad">true</Boolean>
+            </record>
+            <record name="CITY" javaclass="com.wm.util.Values">
+              <value name="name">CITY</value>
+              <value name="source">FORMDATA</value>
+              <value name="type">STRING</value>
+              <value name="description"></value>
+              <Boolean name="isRequired">true</Boolean>
+              <Boolean name="isArray">false</Boolean>
+              <null name="defaultValue"/>
+              <null name="refDefinition"/>
+              <null name="definitionName"/>
+              <Boolean name="includeInRad">true</Boolean>
+            </record>
+          </record>
+          <record name="responseParam" javaclass="com.wm.util.Values">
+            <value name="name">reseponse</value>
+            <value name="source">BODY</value>
+            <value name="type">REFERENCE</value>
+            <null name="description"/>
+            <Boolean name="isRequired">true</Boolean>
+            <Boolean name="isArray">false</Boolean>
+            <null name="defaultValue"/>
+            <value name="refDefinition">/getCustomer360_GET_$response</value>
+            <null name="definitionName"/>
+            <Boolean name="includeInRad">true</Boolean>
+          </record>
+          <record name="responses" javaclass="com.wm.util.Values">
+            <record name="200" javaclass="com.wm.util.Values">
+              <value name="statusCode">200</value>
+              <value name="description">Successful</value>
+              <Boolean name="returnOutput">true</Boolean>
+            </record>
+            <record name="401" javaclass="com.wm.util.Values">
+              <value name="statusCode">401</value>
+              <value name="description">Access Denied</value>
+              <Boolean name="returnOutput">false</Boolean>
+            </record>
+          </record>
+        </record>
+      </record>
+    </record>
+    <record name="/searchCustomer" javaclass="com.wm.util.Values">
+      <value name="nsName">TelefonicaCustomerAPI.restAPI:Customer360</value>
+      <value name="path">/searchCustomer</value>
+      <null name="suffix"/>
+      <record name="operations" javaclass="com.wm.util.Values">
+        <record name="GET" javaclass="com.wm.util.Values">
+          <value name="operationType">GET</value>
+          <value name="nsName">/searchCustomer_GET</value>
+          <value name="description"></value>
+          <array name="requiredDefinitions" type="value" depth="1">
+            <value>/searchCustomer_GET.customer</value>
+            <value>/searchCustomer_GET_$response</value>
+          </array>
+          <record name="parameters" javaclass="com.wm.util.Values">
+            <record name="firstName" javaclass="com.wm.util.Values">
+              <value name="name">firstName</value>
+              <value name="source">FORMDATA</value>
+              <value name="type">STRING</value>
+              <value name="description"></value>
+              <Boolean name="isRequired">true</Boolean>
+              <Boolean name="isArray">false</Boolean>
+              <null name="defaultValue"/>
+              <null name="refDefinition"/>
+              <null name="definitionName"/>
+              <Boolean name="includeInRad">true</Boolean>
+            </record>
+            <record name="lastName" javaclass="com.wm.util.Values">
+              <value name="name">lastName</value>
+              <value name="source">FORMDATA</value>
+              <value name="type">STRING</value>
+              <value name="description"></value>
+              <Boolean name="isRequired">true</Boolean>
+              <Boolean name="isArray">false</Boolean>
+              <null name="defaultValue"/>
+              <null name="refDefinition"/>
+              <null name="definitionName"/>
+              <Boolean name="includeInRad">true</Boolean>
+            </record>
+            <record name="mobilePhone" javaclass="com.wm.util.Values">
+              <value name="name">mobilePhone</value>
+              <value name="source">FORMDATA</value>
+              <value name="type">STRING</value>
+              <value name="description"></value>
+              <Boolean name="isRequired">true</Boolean>
+              <Boolean name="isArray">false</Boolean>
+              <null name="defaultValue"/>
+              <null name="refDefinition"/>
+              <null name="definitionName"/>
+              <Boolean name="includeInRad">true</Boolean>
+            </record>
+          </record>
+          <record name="responseParam" javaclass="com.wm.util.Values">
+            <value name="name">reseponse</value>
+            <value name="source">BODY</value>
+            <value name="type">REFERENCE</value>
+            <null name="description"/>
+            <Boolean name="isRequired">true</Boolean>
+            <Boolean name="isArray">false</Boolean>
+            <null name="defaultValue"/>
+            <value name="refDefinition">/searchCustomer_GET_$response</value>
+            <null name="definitionName"/>
+            <Boolean name="includeInRad">true</Boolean>
+          </record>
+          <record name="responses" javaclass="com.wm.util.Values">
+            <record name="200" javaclass="com.wm.util.Values">
+              <value name="statusCode">200</value>
+              <value name="description">Successful</value>
+              <Boolean name="returnOutput">true</Boolean>
+            </record>
+            <record name="401" javaclass="com.wm.util.Values">
+              <value name="statusCode">401</value>
+              <value name="description">Access Denied</value>
+              <Boolean name="returnOutput">false</Boolean>
+            </record>
+          </record>
+        </record>
+      </record>
+    </record>
   </record>
   <record name="restDefinitions" javaclass="com.wm.util.Values">
+    <record name="/getCustomer360_GET.master" javaclass="com.wm.util.Values">
+      <value name="name">master</value>
+      <value name="nsName">/getCustomer360_GET.master</value>
+      <Boolean name="autoGenerated">true</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="ID" javaclass="com.wm.util.Values">
+          <value name="name">ID</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="CUST_NAME" javaclass="com.wm.util.Values">
+          <value name="name">CUST_NAME</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="CUST_LNG_NAME" javaclass="com.wm.util.Values">
+          <value name="name">CUST_LNG_NAME</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="CUST_SHRT_NAME" javaclass="com.wm.util.Values">
+          <value name="name">CUST_SHRT_NAME</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="CUST_SURNM1" javaclass="com.wm.util.Values">
+          <value name="name">CUST_SURNM1</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="CUST_SURNM2" javaclass="com.wm.util.Values">
+          <value name="name">CUST_SURNM2</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="SURVIVORSHIP_DETAILS" javaclass="com.wm.util.Values">
+          <value name="name">SURVIVORSHIP_DETAILS</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+      </record>
+    </record>
+    <record name="/getCustomer360_GET_$response" javaclass="com.wm.util.Values">
+      <value name="name">getCustomer360_GET_response</value>
+      <value name="nsName">/getCustomer360_GET_$response</value>
+      <Boolean name="autoGenerated">true</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="customers" javaclass="com.wm.util.Values">
+          <value name="name">customers</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">TelefonicaCustomerAPI.docTypes:Customer360</value>
+          <value name="definitionName">Customer360</value>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="status" javaclass="com.wm.util.Values">
+          <value name="name">status</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">TelefonicaCustomerAPI.docTypes:Status</value>
+          <value name="definitionName">Status</value>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+      </record>
+    </record>
+    <record name="TelefonicaCustomerAPI.docTypes:Status" javaclass="com.wm.util.Values">
+      <value name="name">Status</value>
+      <value name="nsName">TelefonicaCustomerAPI.docTypes:Status</value>
+      <Boolean name="autoGenerated">false</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="STATUS_CODE" javaclass="com.wm.util.Values">
+          <value name="name">STATUS_CODE</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="STATUS_MESG" javaclass="com.wm.util.Values">
+          <value name="name">STATUS_MESG</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+      </record>
+    </record>
+    <record name="/getCustomer360_GET.service" javaclass="com.wm.util.Values">
+      <value name="name">service</value>
+      <value name="nsName">/getCustomer360_GET.service</value>
+      <Boolean name="autoGenerated">true</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="SRVC_ID" javaclass="com.wm.util.Values">
+          <value name="name">SRVC_ID</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="SRVC_TYP" javaclass="com.wm.util.Values">
+          <value name="name">SRVC_TYP</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="SRVC_TYP_CD" javaclass="com.wm.util.Values">
+          <value name="name">SRVC_TYP_CD</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="SRC_SYS_ID" javaclass="com.wm.util.Values">
+          <value name="name">SRC_SYS_ID</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="SRC_SYS_SRV_CD" javaclass="com.wm.util.Values">
+          <value name="name">SRC_SYS_SRV_CD</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="SRVC_CD" javaclass="com.wm.util.Values">
+          <value name="name">SRVC_CD</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="SRVC_DESC" javaclass="com.wm.util.Values">
+          <value name="name">SRVC_DESC</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="READY_RECKONER" javaclass="com.wm.util.Values">
+          <value name="name">READY_RECKONER</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="INSTALLED_INDICATOR" javaclass="com.wm.util.Values">
+          <value name="name">INSTALLED_INDICATOR</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="CONFIDENTIAL_INDICATOR" javaclass="com.wm.util.Values">
+          <value name="name">CONFIDENTIAL_INDICATOR</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="FAMILY_SERVICE_CODE" javaclass="com.wm.util.Values">
+          <value name="name">FAMILY_SERVICE_CODE</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="CATALOG_SERVICE_CODE" javaclass="com.wm.util.Values">
+          <value name="name">CATALOG_SERVICE_CODE</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="CATALOG_INDICATOR" javaclass="com.wm.util.Values">
+          <value name="name">CATALOG_INDICATOR</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="MODIFY_USR" javaclass="com.wm.util.Values">
+          <value name="name">MODIFY_USR</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="SRVC_STRT_DT" javaclass="com.wm.util.Values">
+          <value name="name">SRVC_STRT_DT</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="SRVC_END_DT" javaclass="com.wm.util.Values">
+          <value name="name">SRVC_END_DT</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="MODIFY_DT" javaclass="com.wm.util.Values">
+          <value name="name">MODIFY_DT</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="CNTRCT_ID" javaclass="com.wm.util.Values">
+          <value name="name">CNTRCT_ID</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+      </record>
+    </record>
+    <record name="/searchCustomer_GET.customer" javaclass="com.wm.util.Values">
+      <value name="name">customer_1</value>
+      <value name="nsName">/searchCustomer_GET.customer</value>
+      <Boolean name="autoGenerated">true</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="customerNo" javaclass="com.wm.util.Values">
+          <value name="name">customerNo</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="firstName" javaclass="com.wm.util.Values">
+          <value name="name">firstName</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="lastName" javaclass="com.wm.util.Values">
+          <value name="name">lastName</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="mobilePhone" javaclass="com.wm.util.Values">
+          <value name="name">mobilePhone</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="address1" javaclass="com.wm.util.Values">
+          <value name="name">address1</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="address2" javaclass="com.wm.util.Values">
+          <value name="name">address2</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="city" javaclass="com.wm.util.Values">
+          <value name="name">city</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="zip" javaclass="com.wm.util.Values">
+          <value name="name">zip</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="homePhone" javaclass="com.wm.util.Values">
+          <value name="name">homePhone</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="state" javaclass="com.wm.util.Values">
+          <value name="name">state</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="email" javaclass="com.wm.util.Values">
+          <value name="name">email</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+      </record>
+    </record>
+    <record name="/searchCustomer_GET_$response" javaclass="com.wm.util.Values">
+      <value name="name">searchCustomer_GET_response</value>
+      <value name="nsName">/searchCustomer_GET_$response</value>
+      <Boolean name="autoGenerated">true</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="customer" javaclass="com.wm.util.Values">
+          <value name="name">customer</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">true</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">/searchCustomer_GET.customer</value>
+          <value name="definitionName">customer</value>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="processingTime" javaclass="com.wm.util.Values">
+          <value name="name">processingTime</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+      </record>
+    </record>
+    <record name="/getCustomer360_GET.customer" javaclass="com.wm.util.Values">
+      <value name="name">customer</value>
+      <value name="nsName">/getCustomer360_GET.customer</value>
+      <Boolean name="autoGenerated">true</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="master" javaclass="com.wm.util.Values">
+          <value name="name">master</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">/getCustomer360_GET.master</value>
+          <value name="definitionName">master</value>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="address" javaclass="com.wm.util.Values">
+          <value name="name">address</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">true</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">/getCustomer360_GET.address</value>
+          <value name="definitionName">address</value>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+      </record>
+    </record>
+    <record name="TelefonicaCustomerAPI.docTypes:Customer360" javaclass="com.wm.util.Values">
+      <value name="name">Customer360</value>
+      <value name="nsName">TelefonicaCustomerAPI.docTypes:Customer360</value>
+      <Boolean name="autoGenerated">false</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="customer" javaclass="com.wm.util.Values">
+          <value name="name">customer</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">true</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">/getCustomer360_GET.customer</value>
+          <value name="definitionName">customer</value>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+      </record>
+    </record>
+    <record name="/getCustomer360_GET.address" javaclass="com.wm.util.Values">
+      <value name="name">address</value>
+      <value name="nsName">/getCustomer360_GET.address</value>
+      <Boolean name="autoGenerated">true</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="CUST_ADDR_ID" javaclass="com.wm.util.Values">
+          <value name="name">CUST_ADDR_ID</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="ADDRESSLINE1" javaclass="com.wm.util.Values">
+          <value name="name">ADDRESSLINE1</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="ADDRESSLINE2" javaclass="com.wm.util.Values">
+          <value name="name">ADDRESSLINE2</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="ADMINISTRATIVEAREA" javaclass="com.wm.util.Values">
+          <value name="name">ADMINISTRATIVEAREA</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="LOCALITY" javaclass="com.wm.util.Values">
+          <value name="name">LOCALITY</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="POSTALCODE" javaclass="com.wm.util.Values">
+          <value name="name">POSTALCODE</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="COUNTRY" javaclass="com.wm.util.Values">
+          <value name="name">COUNTRY</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="CUST_ID" javaclass="com.wm.util.Values">
+          <value name="name">CUST_ID</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="LONGITUDE" javaclass="com.wm.util.Values">
+          <value name="name">LONGITUDE</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="LATTITUDE" javaclass="com.wm.util.Values">
+          <value name="name">LATTITUDE</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="CUST_ADDR_EMAIL" javaclass="com.wm.util.Values">
+          <value name="name">CUST_ADDR_EMAIL</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="CUST_ADDR_PHONE_NUMBER" javaclass="com.wm.util.Values">
+          <value name="name">CUST_ADDR_PHONE_NUMBER</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="CUST_ADDR_FAX_NUMBER" javaclass="com.wm.util.Values">
+          <value name="name">CUST_ADDR_FAX_NUMBER</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="WINKEY_ADDR" javaclass="com.wm.util.Values">
+          <value name="name">WINKEY_ADDR</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="WINKEY_EMAIL" javaclass="com.wm.util.Values">
+          <value name="name">WINKEY_EMAIL</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="WINKEY_PHNMBR" javaclass="com.wm.util.Values">
+          <value name="name">WINKEY_PHNMBR</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="WINKEY_FXNMBR" javaclass="com.wm.util.Values">
+          <value name="name">WINKEY_FXNMBR</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="CUST_ADDR_TYPE" javaclass="com.wm.util.Values">
+          <value name="name">CUST_ADDR_TYPE</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="service" javaclass="com.wm.util.Values">
+          <value name="name">service</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">true</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">/getCustomer360_GET.service</value>
+          <value name="definitionName">service</value>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+      </record>
+    </record>
   </record>
   <null name="radSource"/>
   <value name="radVersion">1.0</value>

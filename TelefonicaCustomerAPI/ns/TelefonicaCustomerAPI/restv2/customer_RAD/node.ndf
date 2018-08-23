@@ -193,6 +193,18 @@
           <value name="definitionName">customer</value>
           <Boolean name="includeInRad">true</Boolean>
         </record>
+        <record name="processingTime" javaclass="com.wm.util.Values">
+          <value name="name">processingTime</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
       </record>
     </record>
     <record name="/searchCustomer_GET.customer" javaclass="com.wm.util.Values">
@@ -349,10 +361,22 @@
           <value name="type">REFERENCE</value>
           <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
-          <Boolean name="isArray">false</Boolean>
+          <Boolean name="isArray">true</Boolean>
           <null name="defaultValue"/>
           <value name="refDefinition">/searchCustomer_GET.customer</value>
           <value name="definitionName">customer</value>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="processingTime" javaclass="com.wm.util.Values">
+          <value name="name">processingTime</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <value name="description"></value>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
           <Boolean name="includeInRad">true</Boolean>
         </record>
       </record>

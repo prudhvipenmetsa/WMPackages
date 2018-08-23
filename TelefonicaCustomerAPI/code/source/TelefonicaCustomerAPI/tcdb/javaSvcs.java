@@ -10,8 +10,10 @@ import com.wm.app.b2b.server.ServiceException;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
+import java.util.Stack;
 import java.util.concurrent.TimeUnit;
 import com.terracottatech.store.Dataset;
+import com.terracottatech.store.DatasetReader;
 import com.terracottatech.store.DatasetWriterReader;
 import com.terracottatech.store.Record;
 import com.terracottatech.store.StoreException;
@@ -19,6 +21,7 @@ import com.terracottatech.store.definition.CellDefinition;
 import com.terracottatech.store.definition.StringCellDefinition;
 import com.terracottatech.store.function.Collectors;
 import com.terracottatech.store.manager.DatasetManager;
+import com.terracottatech.store.stream.MutableRecordStream;
 import com.terracottatech.store.stream.RecordStream;
 // --- <<IS-END-IMPORTS>> ---
 
@@ -82,6 +85,27 @@ public final class javaSvcs
 
 
 
+	public static final void getOpenDatasetsCount (IData pipeline)
+        throws ServiceException
+	{
+		// --- <<IS-START(getOpenDatasetsCount)>> ---
+		// @sigtype java 3.5
+		// [o] field:0:required count
+		// pipeline
+		
+		// pipeline
+		IDataCursor pipelineCursor = pipeline.getCursor();
+		IDataUtil.put( pipelineCursor, "count",availDatasetStack.size()+"" );
+		pipelineCursor.destroy();
+		
+			
+		// --- <<IS-END>> ---
+
+                
+	}
+
+
+
 	public static final void getRecordByFilter (IData pipeline)
         throws ServiceException
 	{
@@ -102,6 +126,7 @@ public final class javaSvcs
 		// [o] - field:0:required homePhone
 		// [o] - field:0:required state
 		// [o] - field:0:required email
+		// [o] field:0:required processingTime
 		IDataCursor pipelineCursor = pipeline.getCursor();
 		String	dataSetName = IDataUtil.getString( pipelineCursor, "dataSetName" );
 		Optional<String> firstName_1 = Optional.ofNullable(IDataUtil.getString( pipelineCursor, "firstName" ));
@@ -116,22 +141,13 @@ public final class javaSvcs
 			List<Record<String>> results = null ;
 			//long start_time = System.nanoTime();
 			long start_time = System.currentTimeMillis();
-			Dataset<String> ds = getDataset();
+			Dataset<String> ds = getDataset();// getDatasetFromStack(); // getDataset();
 			DatasetWriterReader<String> writerReader = ds.writerReader();
 			if(firstName_1.isPresent() && lastName_1.isPresent() && mobilePhone_1.isPresent()){
-				/* recordOptional =  writerReader.records()
-						.explain(System.out::println) // <1>
-						.batch(10) // <2>
-						.filter(FNAME.value().is(firstName_1.get()))	
-						.filter(LNAME.value().is(lastName_1.get()))	
-						.filter(MPHONE.value().is(firstName_1.get()))	
-						.findAny(); 
-		
-				 */
+				try(MutableRecordStream<String> recordStream = 	writerReader.records()){
 				results = 
-						writerReader.records()
-						.explain(System.out::println) // <1>
-						.batch(10) // <2>
+						recordStream.explain(System.out::println) 
+						//.batch(10) 
 						.filter(FNAME.value().is(firstName_1.get()))	
 						.filter(LNAME.value().is(lastName_1.get()))	
 						.filter(MPHONE.value().is(mobilePhone_1.get()))
@@ -139,59 +155,75 @@ public final class javaSvcs
 				//.findAny();
 				//result.forEach(System.out::println);
 		
-		
+				}
 		
 			}else if(firstName_1.isPresent() && lastName_1.isPresent()){
-				results =  writerReader.records()
-						.explain(System.out::println) // <1>
-						.batch(10) // <2>
+				try(MutableRecordStream<String> recordStream = 	writerReader.records()){
+					results = 
+							recordStream.explain(System.out::println) 
+							//.batch(10)
 						.filter(FNAME.value().is(firstName_1.get()))	
 						.filter(LNAME.value().is(lastName_1.get()))	
 						.collect(java.util.stream.Collectors.toList());	
-		
+				}
 			}else if(firstName_1.isPresent() && mobilePhone_1.isPresent()){
-				results =  writerReader.records()
-						.explain(System.out::println) // <1>
-						.batch(10) // <2>
+				try(MutableRecordStream<String> recordStream = 	writerReader.records()){
+					results = 
+							recordStream.explain(System.out::println) 
+							//.batch(10)
 						.filter(FNAME.value().is(firstName_1.get()))	
 						.filter(MPHONE.value().is(mobilePhone_1.get()))	
 						.collect(java.util.stream.Collectors.toList());
+				}
 		
 			}else if(mobilePhone_1.isPresent() && lastName_1.isPresent()){
-				results =  writerReader.records()
-						.explain(System.out::println) // <1>
-						.batch(10) // <2>
+				try(MutableRecordStream<String> recordStream = 	writerReader.records()){
+					results = 
+							recordStream.explain(System.out::println) 
+							//.batch(10)
 						.filter(LNAME.value().is(lastName_1.get()))	
 						.filter(MPHONE.value().is(mobilePhone_1.get()))	
 						.collect(java.util.stream.Collectors.toList());	
+				}
 		
 			}else if(firstName_1.isPresent()){
-				results =  writerReader.records()
-						.explain(System.out::println) // <1>
-						.batch(10) // <2>
+				try(MutableRecordStream<String> recordStream = 	writerReader.records()){
+					results = 
+							recordStream.explain(System.out::println) 
+							//.batch(10)
 						.filter(FNAME.value().is(firstName_1.get()))	
 						.collect(java.util.stream.Collectors.toList());	
+				}
 		
 			}else if(lastName_1.isPresent()){
-				results =  writerReader.records()
-						.explain(System.out::println) // <1>
-						.batch(10) // <2>
-						.filter(LNAME.value().is(lastName_1.get()))		
-						.collect(java.util.stream.Collectors.toList());	
+			
+				try(MutableRecordStream<String> recordStream = 	writerReader.records()){
+					results = 
+							recordStream.explain(System.out::println) 
+							//.batch(10)
+								.filter(LNAME.value().is(lastName_1.get()))		
+								.collect(java.util.stream.Collectors.toList());	
+				}
+			
+			
+				
 			}else if(mobilePhone_1.isPresent()){
-				results =
-						writerReader.records()
-						.explain(System.out::println) // <1>
-						.batch(10) // <2j
-						.filter(MPHONE.value().is(mobilePhone_1.get())).collect(java.util.stream.Collectors.toList());						
+				try(MutableRecordStream<String> recordStream = 	writerReader.records()){
+					results = 
+							recordStream.explain(System.out::println) 
+							//.batch(10)
+						.filter(MPHONE.value().is(mobilePhone_1.get())).
+						collect(java.util.stream.Collectors.toList());						
 		
+				}
 		
 			}
+			
 			java.util.ArrayList<IData> al = new java.util.ArrayList<IData>();
 			//long end_time = System.nanoTime();
 			long end_time = System.currentTimeMillis();
 			
-			pipelineCursor.insertAfter("processingTime", (end_time - start_time));
+			pipelineCursor.insertAfter("processingTime", ""+(end_time - start_time));
 			if(results!=null)
 				for(Record<String> record: results){
 		
@@ -226,7 +258,8 @@ public final class javaSvcs
 			if(al.size()>0)
 				pipelineCursor.insertAfter("customer", al.toArray());
 			al.clear();
-		
+			
+			//release(ds);
 		
 		}catch(Exception e){
 			throw new ServiceException(e.getMessage());
@@ -258,6 +291,7 @@ public final class javaSvcs
 		// [o] - field:0:required homePhone
 		// [o] - field:0:required state
 		// [o] - field:0:required email
+		// [o] field:0:required processingTime
 		IDataCursor pipelineCursor = pipeline.getCursor();
 		String	dataSetName = IDataUtil.getString( pipelineCursor, "dataSetName" );
 		String	key = IDataUtil.getString( pipelineCursor, "key" );
@@ -266,12 +300,15 @@ public final class javaSvcs
 		try  {
 			long start_time = System.currentTimeMillis();
 			Dataset<String> ds = getDataset();
-			DatasetWriterReader<String> writerReader = ds.writerReader();
+			//  Dataset<String> ds = getDatasetFromStack(); 
 			
-			Optional<Record<String>> recordOptional = writerReader.get(key);
+			DatasetReader<String> reader = ds.reader();
+			Optional<Record<String>> recordOptional = reader.get(key);
+			
 			long end_time = System.currentTimeMillis();
+			//release(ds);
 			
-			pipelineCursor.insertAfter("processingTime", (end_time - start_time) );
+			pipelineCursor.insertAfter("processingTime", ""+(end_time - start_time) );
 		      if (recordOptional.isPresent()) {
 		    	  
 		    	  recordOptional.get().getKey();
@@ -301,6 +338,7 @@ public final class javaSvcs
 		        custCurso.insertAfter("zip", zip);
 		        custCurso.destroy();
 		        pipelineCursor.insertAfter("customer", cust);
+		        
 		      }
 		}catch(Exception e){
 			throw new ServiceException(e.getMessage());
@@ -366,8 +404,11 @@ public final class javaSvcs
 	}
 
 	// --- <<IS-START-SHARED>> ---
-	public static  DatasetManager datasetManager;
-	public static Dataset<String> dataset ;
+	public static volatile DatasetManager datasetManager;
+	public static volatile Dataset<String> dataset ;
+	public static Stack<Dataset<String>> availDatasetStack = new Stack<Dataset<String>>();
+	public static Stack<DatasetManager> availDSManagerStack = new Stack<DatasetManager>();
+	 
 	private static final StringCellDefinition FNAME = CellDefinition.defineString("firstName");
 	private static final StringCellDefinition LNAME = CellDefinition.defineString("lastName");
 	private static final StringCellDefinition EMAIL = CellDefinition.defineString("email");
@@ -378,18 +419,52 @@ public final class javaSvcs
 	private static final StringCellDefinition CITY = CellDefinition.defineString("city");
 	private static final StringCellDefinition ST = CellDefinition.defineString("state");
 	private static final StringCellDefinition ZIP = CellDefinition.defineString("zip");
+	public static void loadDatasets() throws Exception{
+		if(availDatasetStack.size()==0)
+			for(int i =0;i<10;i++){
+				dataset =	getDatasetManager().getDataset("customers", com.terracottatech.store.Type.STRING);
+				availDatasetStack.push(dataset);
+			}
+		
+	}
+	public static Dataset<String> getDatasetFromStack() throws Exception{
+		if(availDatasetStack.size()==0) loadDatasets() ;
+		
+		return availDatasetStack.pop();
+	}
+	public static void  release(Dataset<String> ds){
+		availDatasetStack.push(ds);
+		//while(availDatasetStack.size()>10) // close any datasets that are more than 10
+			//availDatasetStack.pop().close();
+		 
+	}
 	public static Dataset<String> getDataset() throws Exception{
 		if(dataset!= null) return dataset;
 		dataset =	getDatasetManager().getDataset("customers", com.terracottatech.store.Type.STRING);
 		return dataset;
+	}
+	
+	
+	public static DatasetManager getDatasetManagerFromStack() throws URISyntaxException,ServiceException,StoreException{
+		if( availDSManagerStack.size()==0){ //pool 10 dataset managers
+			for(int i=0;i<10;i++)
+			availDSManagerStack.push(getDatasetManager());
+					}
+	     return availDSManagerStack.pop();
+		
+	
+	
+			
+			// datasetManager.destroyDataset(STORE_NAME);
 	}
 	public static DatasetManager getDatasetManager() throws URISyntaxException,ServiceException,StoreException{
 		if(datasetManager!=null ) return datasetManager;
 		String tcURL = System.getProperty("watt.tcdb.customer.uri");
 		if(tcURL == null || !tcURL.startsWith("terracotta"))  throw new ServiceException("TCDB URL is not configured in extended settings watt.tcdb.customer.uri property");
 		java.net.URI clusterUri = new java.net.URI(tcURL);
-	    return
-				DatasetManager.clustered(clusterUri).withConnectionTimeout(300,TimeUnit.SECONDS).build() ;
+		datasetManager = DatasetManager.clustered(clusterUri).withConnectionTimeout(300,TimeUnit.SECONDS).build() ;
+	    return datasetManager;
+				
 	
 	
 			
