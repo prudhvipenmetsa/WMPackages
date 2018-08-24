@@ -111,17 +111,9 @@ public final class javaSvcs
 		// pipeline
 		
 		
-			try{
-				pipelineCursor.insertAfter("dataset", getDatasetManager().getDataset(dataSetName, com.terracottatech.store.Type.STRING));
-						
-			
-				
-			}catch(StoreException e){
-				throw new ServiceException(e.getMessage());
-			}catch(Exception e){
-				throw new ServiceException(e.getMessage());
-			}
+		
 			pipelineCursor.destroy();
+			
 		// --- <<IS-END>> ---
 
                 
