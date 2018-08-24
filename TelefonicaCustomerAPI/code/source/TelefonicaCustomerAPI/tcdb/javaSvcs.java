@@ -41,6 +41,50 @@ public final class javaSvcs
 
 
 
+	public static final void closeDatasetManager (IData pipeline)
+        throws ServiceException
+	{
+		// --- <<IS-START(closeDatasetManager)>> ---
+		// @sigtype java 3.5
+		com.gcs.tcclient.DataSetManagerFactory.close();	 
+		// --- <<IS-END>> ---
+
+                
+	}
+
+
+
+	public static final void createDatasetManager (IData pipeline)
+        throws ServiceException
+	{
+		// --- <<IS-START(createDatasetManager)>> ---
+		// @sigtype java 3.5
+		if(datasetManager!=null )  datasetManager.close();
+		try{
+			String tcURL = System.getProperty("watt.tcdb.customer.uri");
+			
+			
+			
+			if(tcURL == null || !tcURL.startsWith("terracotta"))  
+				throw new ServiceException("TCDB URL is not configured in extended settings watt.tcdb.customer.uri property");
+			com.gcs.tcclient.DataSetManagerFactory.tcURL=tcURL;
+			com.gcs.tcclient.DataSetManagerFactory.timeout=300;			
+			com.gcs.tcclient.DataSetManagerFactory.getDataset();
+			
+			
+			System.out.println("NEW: CREATING DatasetManager while package startup");
+		}catch(Exception e){
+			System.out.println("Excpetion: DSM" + e.getCause().getMessage()+ "*********" + e.getMessage());
+			e.printStackTrace();
+			throw new ServiceException(e);
+		}
+		// --- <<IS-END>> ---
+
+                
+	}
+
+
+
 	public static final void getDataSet (IData pipeline)
         throws ServiceException
 	{
@@ -141,88 +185,77 @@ public final class javaSvcs
 			List<Record<String>> results = null ;
 			//long start_time = System.nanoTime();
 			long start_time = System.currentTimeMillis();
-			Dataset<String> ds = getDataset();// getDatasetFromStack(); // getDataset();
+			Dataset<String> ds = com.gcs.tcclient.DataSetManagerFactory.getDataset(); //getDataset();// getDatasetFromStack(); // getDataset();
 			DatasetWriterReader<String> writerReader = ds.writerReader();
 			if(firstName_1.isPresent() && lastName_1.isPresent() && mobilePhone_1.isPresent()){
 				try(MutableRecordStream<String> recordStream = 	writerReader.records()){
-				results = 
-						recordStream.explain(System.out::println) 
-						//.batch(10) 
-						.filter(FNAME.value().is(firstName_1.get()))	
-						.filter(LNAME.value().is(lastName_1.get()))	
-						.filter(MPHONE.value().is(mobilePhone_1.get()))
-						.collect(java.util.stream.Collectors.toList());		
-				//.findAny();
-				//result.forEach(System.out::println);
+					results = 
+		
+							recordStream.filter(FNAME.value().is(firstName_1.get()))	
+							.filter(LNAME.value().is(lastName_1.get()))	
+							.filter(MPHONE.value().is(mobilePhone_1.get()))
+							//.batch(10) 
+							.collect(java.util.stream.Collectors.toList());		
+					//.findAny();
+					//result.forEach(System.out::println);
 		
 				}
 		
 			}else if(firstName_1.isPresent() && lastName_1.isPresent()){
 				try(MutableRecordStream<String> recordStream = 	writerReader.records()){
 					results = 
-							recordStream.explain(System.out::println) 
-							//.batch(10)
-						.filter(FNAME.value().is(firstName_1.get()))	
-						.filter(LNAME.value().is(lastName_1.get()))	
-						.collect(java.util.stream.Collectors.toList());	
+							recordStream
+							.filter(FNAME.value().is(firstName_1.get()))	
+							.filter(LNAME.value().is(lastName_1.get()))	
+							.collect(java.util.stream.Collectors.toList());	
 				}
 			}else if(firstName_1.isPresent() && mobilePhone_1.isPresent()){
 				try(MutableRecordStream<String> recordStream = 	writerReader.records()){
 					results = 
-							recordStream.explain(System.out::println) 
-							//.batch(10)
-						.filter(FNAME.value().is(firstName_1.get()))	
-						.filter(MPHONE.value().is(mobilePhone_1.get()))	
-						.collect(java.util.stream.Collectors.toList());
+							recordStream.filter(FNAME.value().is(firstName_1.get()))	
+							.filter(MPHONE.value().is(mobilePhone_1.get()))	
+							.collect(java.util.stream.Collectors.toList());
 				}
 		
 			}else if(mobilePhone_1.isPresent() && lastName_1.isPresent()){
 				try(MutableRecordStream<String> recordStream = 	writerReader.records()){
 					results = 
-							recordStream.explain(System.out::println) 
-							//.batch(10)
-						.filter(LNAME.value().is(lastName_1.get()))	
-						.filter(MPHONE.value().is(mobilePhone_1.get()))	
-						.collect(java.util.stream.Collectors.toList());	
+							recordStream.filter(LNAME.value().is(lastName_1.get()))	
+							.filter(MPHONE.value().is(mobilePhone_1.get()))	
+							.collect(java.util.stream.Collectors.toList());	
 				}
 		
 			}else if(firstName_1.isPresent()){
 				try(MutableRecordStream<String> recordStream = 	writerReader.records()){
 					results = 
-							recordStream.explain(System.out::println) 
-							//.batch(10)
-						.filter(FNAME.value().is(firstName_1.get()))	
-						.collect(java.util.stream.Collectors.toList());	
+							recordStream.filter(FNAME.value().is(firstName_1.get()))	
+							.collect(java.util.stream.Collectors.toList());	
 				}
 		
 			}else if(lastName_1.isPresent()){
-			
+		
 				try(MutableRecordStream<String> recordStream = 	writerReader.records()){
 					results = 
-							recordStream.explain(System.out::println) 
-							//.batch(10)
-								.filter(LNAME.value().is(lastName_1.get()))		
-								.collect(java.util.stream.Collectors.toList());	
+							recordStream.filter(LNAME.value().is(lastName_1.get()))		
+							.collect(java.util.stream.Collectors.toList());	
 				}
-			
-			
-				
+		
+		
+		
 			}else if(mobilePhone_1.isPresent()){
 				try(MutableRecordStream<String> recordStream = 	writerReader.records()){
 					results = 
-							recordStream.explain(System.out::println) 
-							//.batch(10)
-						.filter(MPHONE.value().is(mobilePhone_1.get())).
-						collect(java.util.stream.Collectors.toList());						
+							recordStream.filter(MPHONE.value().is(mobilePhone_1.get())).
+							collect(java.util.stream.Collectors.toList());						
 		
 				}
 		
 			}
-			
+		
 			java.util.ArrayList<IData> al = new java.util.ArrayList<IData>();
 			//long end_time = System.nanoTime();
 			long end_time = System.currentTimeMillis();
-			
+		
 			pipelineCursor.insertAfter("processingTime", ""+(end_time - start_time));
 			if(results!=null)
 				for(Record<String> record: results){
@@ -258,7 +291,7 @@ public final class javaSvcs
 			if(al.size()>0)
 				pipelineCursor.insertAfter("customer", al.toArray());
 			al.clear();
-			
+		
 			//release(ds);
 		
 		}catch(Exception e){
@@ -299,7 +332,7 @@ public final class javaSvcs
 		
 		try  {
 			long start_time = System.currentTimeMillis();
-			Dataset<String> ds = getDataset();
+			Dataset<String> ds = com.gcs.tcclient.DataSetManagerFactory.getDataset(); //getDataset();
 			//  Dataset<String> ds = getDatasetFromStack(); 
 			
 			DatasetReader<String> reader = ds.reader();
@@ -385,7 +418,7 @@ public final class javaSvcs
 		
 		try  {
 			
-			Dataset<String> ds = getDataset();
+			Dataset<String> ds = com.gcs.tcclient.DataSetManagerFactory.getDataset();// getDataset();
 			DatasetWriterReader<String> writerReader = ds.writerReader();
 			
 				long con = 
@@ -420,6 +453,7 @@ public final class javaSvcs
 	private static final StringCellDefinition CITY = CellDefinition.defineString("city");
 	private static final StringCellDefinition ST = CellDefinition.defineString("state");
 	private static final StringCellDefinition ZIP = CellDefinition.defineString("zip");
+	/*
 	public static void loadDatasets() throws Exception{
 		if(availDatasetStack.size()==0)
 			for(int i =0;i<10;i++){
@@ -439,12 +473,6 @@ public final class javaSvcs
 			//availDatasetStack.pop().close();
 		 
 	}
-	public static Dataset<String> getDataset() throws Exception{
-		if(dataset!= null) return dataset;
-		dataset =	getDatasetManager().getDataset("customers", com.terracottatech.store.Type.STRING);
-		return dataset;
-	}
-	
 	
 	public static DatasetManager getDatasetManagerFromStack() throws URISyntaxException,ServiceException,StoreException{
 		if( availDSManagerStack.size()==0){ //pool 10 dataset managers
@@ -458,12 +486,30 @@ public final class javaSvcs
 			
 			// datasetManager.destroyDataset(STORE_NAME);
 	}
+	
+	*
+	*/
+	public static Dataset<String> getDataset() throws Exception{
+		if(dataset!= null){
+			//System.out.println("REUSE: Dataset Found in memory");
+		}else {
+			dataset =	getDatasetManager().getDataset("customers", com.terracottatech.store.Type.STRING);
+			System.out.println("NEW: Dataset not found in memory. Creating new dataset");
+		}
+		return dataset;
+	}
+	
 	public static DatasetManager getDatasetManager() throws URISyntaxException,ServiceException,StoreException{
-		if(datasetManager!=null ) return datasetManager;
-		String tcURL = System.getProperty("watt.tcdb.customer.uri");
-		if(tcURL == null || !tcURL.startsWith("terracotta"))  throw new ServiceException("TCDB URL is not configured in extended settings watt.tcdb.customer.uri property");
-		java.net.URI clusterUri = new java.net.URI(tcURL);
-		datasetManager = DatasetManager.clustered(clusterUri).withConnectionTimeout(300,TimeUnit.SECONDS).build() ;
+		if(datasetManager!=null ){
+			//System.out.println("REUSE: DatasetManager Found in memory");
+		}else{
+			String tcURL = System.getProperty("watt.tcdb.customer.uri");
+			if(tcURL == null || !tcURL.startsWith("terracotta"))  
+				throw new ServiceException("TCDB URL is not configured in extended settings watt.tcdb.customer.uri property");
+			java.net.URI clusterUri = new java.net.URI(tcURL);
+			datasetManager = DatasetManager.clustered(clusterUri).withConnectionTimeout(300,TimeUnit.SECONDS).build() ;
+			System.out.println("NEW: DatasetManager not Found in memory. Building the DSM");
+		}
 	    return datasetManager;
 				
 	
