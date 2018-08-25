@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">interface</value>
+  <value name="node_subtype">unknown</value>
+  <value name="node_nsName">TelefonicaCustomerAPI.tcdb.customer360</value>
+  <value name="is_public">false</value>
+  <value name="shared">cHVibGljIHN0YXRpYyB2b2lkIGFkZFRvQ2VsbHMoamF2YS51dGlsLkFycmF5TGlzdDxDZWxsPFN0
+cmluZz4+IGFsLCBDZWxsRGVmaW5pdGlvbjxTdHJpbmc+IGNlbGwsU3RyaW5nIHZhbHVlKXsKCWlm
+KHZhbHVlIT1udWxsKQoJCWFsLmFkZChjZWxsLm5ld0NlbGwodmFsdWUpKTsKfQ==</value>
+  <value name="encodeutf8">true</value>
+  <value name="extends"></value>
+  <array name="implements" type="value" depth="1">
+  </array>
+  <array name="imports" type="value" depth="1">
+    <value>com.terracottatech.store.Cell</value>
+    <value>com.terracottatech.store.Dataset</value>
+    <value>com.terracottatech.store.DatasetReader</value>
+    <value>com.terracottatech.store.DatasetWriterReader</value>
+    <value>com.terracottatech.store.Record</value>
+    <value>com.terracottatech.store.StoreException</value>
+    <value>com.terracottatech.store.definition.CellDefinition</value>
+    <value>com.terracottatech.store.stream.MutableRecordStream</value>
+    <value>java.util.Optional</value>
+    <value>com.gcs.tcclient.DataSetManagerFactory</value>
+    <value>com.gcs.tcclient.DataSetManagerFactory.CustAddress</value>
+    <value>com.gcs.tcclient.DataSetManagerFactory.CustCrossWalk</value>
+    <value>com.gcs.tcclient.DataSetManagerFactory.CustMaster</value>
+    <value>com.gcs.tcclient.DataSetManagerFactory.CustService</value>
+  </array>
+</Values>
