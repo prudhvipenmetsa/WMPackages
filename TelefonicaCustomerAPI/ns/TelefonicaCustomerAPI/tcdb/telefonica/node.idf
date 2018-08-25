@@ -13,8 +13,11 @@
   <array name="imports" type="value" depth="1">
     <value>com.terracottatech.store.Cell</value>
     <value>com.terracottatech.store.Dataset</value>
+    <value>com.terracottatech.store.DatasetReader</value>
     <value>com.terracottatech.store.DatasetWriterReader</value>
+    <value>com.terracottatech.store.Record</value>
     <value>com.terracottatech.store.StoreException</value>
+    <value>java.util.Optional</value>
     <value>com.gcs.tcclient.DataSetManagerFactory</value>
     <value>com.gcs.tcclient.DataSetManagerFactory.CustAddress</value>
     <value>com.gcs.tcclient.DataSetManagerFactory.CustCrossWalk</value>

@@ -9,8 +9,11 @@ import com.wm.app.b2b.server.ServiceException;
 // --- <<IS-START-IMPORTS>> ---
 import com.terracottatech.store.Cell;
 import com.terracottatech.store.Dataset;
+import com.terracottatech.store.DatasetReader;
 import com.terracottatech.store.DatasetWriterReader;
+import com.terracottatech.store.Record;
 import com.terracottatech.store.StoreException;
+import java.util.Optional;
 import com.gcs.tcclient.DataSetManagerFactory;
 import com.gcs.tcclient.DataSetManagerFactory.CustAddress;
 import com.gcs.tcclient.DataSetManagerFactory.CustCrossWalk;
@@ -60,6 +63,71 @@ public final class telefonica
 			e.printStackTrace();
 			throw new ServiceException(e);
 		}
+		// --- <<IS-END>> ---
+
+                
+	}
+
+
+
+	public static final void getCustomerMaster (IData pipeline)
+        throws ServiceException
+	{
+		// --- <<IS-START(getCustomerMaster)>> ---
+		// @sigtype java 3.5
+		// [i] field:0:required CUST_ID
+		// [o] record:0:required master
+		// [o] - field:0:required ID
+		// [o] - field:0:required CUST_NAME
+		// [o] - field:0:required CUST_LNG_NAME
+		// [o] - field:0:required CUST_SHRT_NAME
+		// [o] - field:0:required CUST_SURNM1
+		// [o] - field:0:required CUST_SURNM2
+		// [o] - field:0:required SURVIVORSHIP_DETAILS
+		IDataCursor pipelineCursor = pipeline.getCursor();
+		
+		String	key = IDataUtil.getString( pipelineCursor, "CUST_ID" );
+		// pipeline
+		
+		try  {
+			long start_time = System.currentTimeMillis();
+			Dataset<Long> ds = com.gcs.tcclient.DataSetManagerFactory.getCustMasterDataSet(); //getDataset();
+			//  Dataset<String> ds = getDatasetFromStack(); 
+			
+			DatasetReader<Long> reader = ds.reader();
+			
+			Optional<Record<Long>> recordOptional = reader.get(Long.parseLong(key));
+			
+			long end_time = System.currentTimeMillis();
+			//release(ds);
+			
+			pipelineCursor.insertAfter("processingTime", ""+(end_time - start_time) );
+		      if (recordOptional.isPresent()) {
+		
+		    	
+		
+		    	// master
+		    	IData	master = IDataFactory.create();
+		    	IDataCursor masterCursor = master.getCursor();
+		    	IDataUtil.put( masterCursor, "ID",  recordOptional.get().getKey() );
+		    	IDataUtil.put( masterCursor, "CUST_NAME", recordOptional.get().get(CustMaster.CUST_NAME).get());
+		    	IDataUtil.put( masterCursor, "CUST_LNG_NAME", recordOptional.get().get(CustMaster.CUST_LNG_NAME).get());
+		    	IDataUtil.put( masterCursor, "CUST_SHRT_NAME", recordOptional.get().get(CustMaster.CUST_SHRT_NAME).get());
+		    	IDataUtil.put( masterCursor, "CUST_SURNM1", recordOptional.get().get(CustMaster.CUST_SURNM1).get());
+		    	IDataUtil.put( masterCursor, "CUST_SURNM2", recordOptional.get().get(CustMaster.CUST_SURNM2).get());
+		    	//IDataUtil.put( masterCursor, "SURVIVORSHIP_DETAILS", "SURVIVORSHIP_DETAILS" );
+		    	masterCursor.destroy();
+		    	IDataUtil.put( pipelineCursor, "master", master );
+		    	pipelineCursor.destroy();
+		
+		    
+		        
+		      }
+		}catch(Exception e){
+			throw new ServiceException(e.getMessage());
+		}
+		pipelineCursor.destroy();
+			
 		// --- <<IS-END>> ---
 
                 
