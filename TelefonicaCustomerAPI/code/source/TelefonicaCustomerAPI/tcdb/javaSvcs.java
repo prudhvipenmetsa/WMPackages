@@ -191,7 +191,9 @@ public final class javaSvcs
 				try(MutableRecordStream<String> recordStream = 	writerReader.records()){
 					results = 
 		
-							recordStream.filter(FNAME.value().is(firstName_1.get()))	
+							//recordStream.filter(FNAME.value().is("/^.Prudhvi0*$/"))
+							//recordStream.filter(FNAME.value().is("/^.*Prudhvi0.*$/")) //firstName_1.get()))
+							recordStream.filter(FNAME.value().is(firstName_1.get()))
 							.filter(LNAME.value().is(lastName_1.get()))	
 							.filter(MPHONE.value().is(mobilePhone_1.get()))
 							//.batch(10) 

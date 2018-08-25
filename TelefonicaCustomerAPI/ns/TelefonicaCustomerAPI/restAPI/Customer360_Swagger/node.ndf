@@ -295,18 +295,6 @@
           <null name="definitionName"/>
           <Boolean name="includeInRad">true</Boolean>
         </record>
-        <record name="SURVIVORSHIP_DETAILS" javaclass="com.wm.util.Values">
-          <value name="name">SURVIVORSHIP_DETAILS</value>
-          <value name="source">FORMDATA</value>
-          <value name="type">STRING</value>
-          <value name="description"></value>
-          <Boolean name="isRequired">true</Boolean>
-          <Boolean name="isArray">false</Boolean>
-          <null name="defaultValue"/>
-          <null name="refDefinition"/>
-          <null name="definitionName"/>
-          <Boolean name="includeInRad">true</Boolean>
-        </record>
       </record>
     </record>
     <record name="/getCustomer360_GET_$response" javaclass="com.wm.util.Values">
@@ -591,8 +579,8 @@
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
           <value name="description"></value>
-          <Boolean name="isRequired">true</Boolean>
-          <Boolean name="isArray">false</Boolean>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">true</Boolean>
           <null name="defaultValue"/>
           <null name="refDefinition"/>
           <null name="definitionName"/>
@@ -981,54 +969,6 @@
         </record>
         <record name="CUST_ADDR_FAX_NUMBER" javaclass="com.wm.util.Values">
           <value name="name">CUST_ADDR_FAX_NUMBER</value>
-          <value name="source">FORMDATA</value>
-          <value name="type">STRING</value>
-          <value name="description"></value>
-          <Boolean name="isRequired">true</Boolean>
-          <Boolean name="isArray">false</Boolean>
-          <null name="defaultValue"/>
-          <null name="refDefinition"/>
-          <null name="definitionName"/>
-          <Boolean name="includeInRad">true</Boolean>
-        </record>
-        <record name="WINKEY_ADDR" javaclass="com.wm.util.Values">
-          <value name="name">WINKEY_ADDR</value>
-          <value name="source">FORMDATA</value>
-          <value name="type">STRING</value>
-          <value name="description"></value>
-          <Boolean name="isRequired">true</Boolean>
-          <Boolean name="isArray">false</Boolean>
-          <null name="defaultValue"/>
-          <null name="refDefinition"/>
-          <null name="definitionName"/>
-          <Boolean name="includeInRad">true</Boolean>
-        </record>
-        <record name="WINKEY_EMAIL" javaclass="com.wm.util.Values">
-          <value name="name">WINKEY_EMAIL</value>
-          <value name="source">FORMDATA</value>
-          <value name="type">STRING</value>
-          <value name="description"></value>
-          <Boolean name="isRequired">true</Boolean>
-          <Boolean name="isArray">false</Boolean>
-          <null name="defaultValue"/>
-          <null name="refDefinition"/>
-          <null name="definitionName"/>
-          <Boolean name="includeInRad">true</Boolean>
-        </record>
-        <record name="WINKEY_PHNMBR" javaclass="com.wm.util.Values">
-          <value name="name">WINKEY_PHNMBR</value>
-          <value name="source">FORMDATA</value>
-          <value name="type">STRING</value>
-          <value name="description"></value>
-          <Boolean name="isRequired">true</Boolean>
-          <Boolean name="isArray">false</Boolean>
-          <null name="defaultValue"/>
-          <null name="refDefinition"/>
-          <null name="definitionName"/>
-          <Boolean name="includeInRad">true</Boolean>
-        </record>
-        <record name="WINKEY_FXNMBR" javaclass="com.wm.util.Values">
-          <value name="name">WINKEY_FXNMBR</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
           <value name="description"></value>
