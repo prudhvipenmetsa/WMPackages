@@ -36,7 +36,7 @@
 	<classpathentry kind="lib" path="C:/SoftwareAG/common/lib/terracotta-tctql.jar"/>
 	<classpathentry kind="lib" path="C:/SoftwareAG/common/lib/terracotta-toolkit-runtime-ee.jar"/>
 	<classpathentry kind="lib" path="C:/SoftwareAG/common/lib/ext/slf4j-api.jar"/>
-	<classpathentry kind="lib" path="C:/SoftwareAG/IntegrationServer/instances/tclient/lib/jars/custom/GCS_DSM.jar"/>
+	<classpathentry kind="lib" path="C:/SoftwareAG/IntegrationServer/instances/default/lib/jars/custom/GCS_DSM.jar"/>
 	<classpathentry kind="var" path="ENTIREX_RUNTIME"/>
 	<classpathentry kind="output" path="code/classes"/>
 </classpath>
