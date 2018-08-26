@@ -467,7 +467,7 @@ public final class customer360
 											serviceCursor.destroy();
 		
 											servicesAL.add(service);
-											//getservices for each address
+											//getservices for each address 
 		
 										}
 										if(servicesAL.size()>0)//insert Addresses
