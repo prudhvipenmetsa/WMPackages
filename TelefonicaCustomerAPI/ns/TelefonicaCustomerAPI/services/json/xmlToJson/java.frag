@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">xmlToJson</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">dHJ5ew0KCUphY2tzb25YbWxNb2R1bGUgeG1sTW9kdWxlID0gbmV3IEphY2tzb25YbWxNb2R1bGUo
+KTsNCgl4bWxNb2R1bGUuc2V0RGVmYXVsdFVzZVdyYXBwZXIoZmFsc2UpOw0KCQkJCVhtbE1hcHBl
+ciB4bWxNYXBwZXIgPSBuZXcgWG1sTWFwcGVyKHhtbE1vZHVsZSk7DQoJLy8gcGlwZWxpbmUNCglJ
+RGF0YUN1cnNvciBwaXBlbGluZUN1cnNvciA9IHBpcGVsaW5lLmdldEN1cnNvcigpOw0KCVN0cmlu
+Zwl4bWxTdHJpbmcgPSBJRGF0YVV0aWwuZ2V0U3RyaW5nKCBwaXBlbGluZUN1cnNvciwgInhtbFN0
+cmluZyIgKTsNCglKc29uTm9kZSBub2RlID0geG1sTWFwcGVyLnJlYWRUcmVlKHhtbFN0cmluZy5n
+ZXRCeXRlcygiVVRGLTgiKSk7DQoJT2JqZWN0TWFwcGVyIGpzb25NYXBwZXIgPSBuZXcgT2JqZWN0
+TWFwcGVyKCk7DQoJSURhdGFVdGlsLnB1dCggcGlwZWxpbmVDdXJzb3IsICJqc29uU3RyaW5nIiwg
+anNvbk1hcHBlci53cml0ZVZhbHVlQXNTdHJpbmcobm9kZSkpOw0KCQ0KCXBpcGVsaW5lQ3Vyc29y
+LmRlc3Ryb3koKTsNCg0KCQ0KfWNhdGNoKEV4Y2VwdGlvbiBlKXsNCgl0aHJvdyBuZXcgU2Vydmlj
+ZUV4Y2VwdGlvbiAoZSk7DQp9</value>
+</Values>

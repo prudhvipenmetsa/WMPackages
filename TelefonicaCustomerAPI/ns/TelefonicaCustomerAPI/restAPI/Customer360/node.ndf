@@ -18,13 +18,6 @@
           <value>GET</value>
         </array>
       </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="urlTemplate">/searchCustomer</value>
-        <value name="serviceName">TelefonicaCustomerAPI.tcdb:getCustomerBySearchFilter</value>
-        <array name="httpMethods" type="value" depth="1">
-          <value>GET</value>
-        </array>
-      </record>
     </array>
   </record>
   <null name="originUri"/>

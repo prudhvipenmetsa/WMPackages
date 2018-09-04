@@ -7,7 +7,21 @@
   <value name="is_public">false</value>
   <value name="shared">cHVibGljIHN0YXRpYyB2b2lkIGFkZFRvQ2VsbHMoamF2YS51dGlsLkFycmF5TGlzdDxDZWxsPFN0
 cmluZz4+IGFsLCBDZWxsRGVmaW5pdGlvbjxTdHJpbmc+IGNlbGwsU3RyaW5nIHZhbHVlKXsKCWlm
-KHZhbHVlIT1udWxsKQoJCWFsLmFkZChjZWxsLm5ld0NlbGwodmFsdWUpKTsKfQ==</value>
+KHZhbHVlIT1udWxsKQoJCWFsLmFkZChjZWxsLm5ld0NlbGwodmFsdWUpKTsKfQoKcHVibGljIHN0
+YXRpYyBJRGF0YSBjcmVhdGVTdGF0dXNSZWNvcmQoU3RyaW5nIEVSUl9DT0RFLFN0cmluZyBFUlJf
+TUVTRyl7CglJRGF0YQlzdGF0dXMgPSBJRGF0YUZhY3RvcnkuY3JlYXRlKCk7CglJRGF0YUN1cnNv
+ciBzdGF0dXNDdXJzb3IgPSBzdGF0dXMuZ2V0Q3Vyc29yKCk7CglJRGF0YVV0aWwucHV0KCBzdGF0
+dXNDdXJzb3IsICJTVEFUVVNfQ09ERSIsIEVSUl9DT0RFKTsKCUlEYXRhVXRpbC5wdXQoIHN0YXR1
+c0N1cnNvciwgIlNUQVRVU19NRVNHIiwgRVJSX01FU0cgKTsKCXN0YXR1c0N1cnNvci5kZXN0cm95
+KCk7CglyZXR1cm4gc3RhdHVzOwp9CgpwdWJsaWMgc3RhdGljIEJ1aWxkYWJsZVByZWRpY2F0ZTxS
+ZWNvcmQ8Pz4+ICBhZGRGaWx0ZXJQcmVkaWNhdGUoIEJ1aWxkYWJsZVByZWRpY2F0ZTxSZWNvcmQ8
+Pz4+ICBleGlzdFByZWQsIFN0cmluZ0NlbGxEZWZpbml0aW9uICBjZWxsRGVmLE9wdGlvbmFsPFN0
+cmluZz4gY2VsVmFsKXsgCglpZihjZWxWYWwuaXNQcmVzZW50KCkpewoJCUJ1aWxkYWJsZVByZWRp
+Y2F0ZTxSZWNvcmQ8Pz4+IG5ld3ByZWQ9IGNlbGxEZWYudmFsdWUoKS5pcyhjZWxWYWwuZ2V0KCkp
+OwoJCWlmKGV4aXN0UHJlZCE9bnVsbCkgIC8vIGFkZCB0byBleGlzdGluZyBwcmVkaWNhdGUKCQkJ
+bmV3cHJlZCA9IGV4aXN0UHJlZC5hbmQobmV3cHJlZCk7CgkJcmV0dXJuIG5ld3ByZWQ7Cgl9ZWxz
+ZXsgLy9ubyBmaWx0ZXIgdmFsdWUgZXhpc3RzLiBkb25vdCBhZGQgdGhlIHByZWRpY2F0ZQoKCQly
+ZXR1cm4gZXhpc3RQcmVkOwkKCgl9Cgp9</value>
   <value name="encodeutf8">true</value>
   <value name="extends"></value>
   <array name="implements" type="value" depth="1">
@@ -20,6 +34,8 @@ KHZhbHVlIT1udWxsKQoJCWFsLmFkZChjZWxsLm5ld0NlbGwodmFsdWUpKTsKfQ==</value>
     <value>com.terracottatech.store.Record</value>
     <value>com.terracottatech.store.StoreException</value>
     <value>com.terracottatech.store.definition.CellDefinition</value>
+    <value>com.terracottatech.store.definition.StringCellDefinition</value>
+    <value>com.terracottatech.store.function.BuildablePredicate</value>
     <value>com.terracottatech.store.stream.MutableRecordStream</value>
     <value>java.util.Optional</value>
     <value>com.gcs.tcclient.DataSetManagerFactory</value>

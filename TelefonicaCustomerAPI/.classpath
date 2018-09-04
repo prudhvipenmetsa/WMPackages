@@ -38,5 +38,12 @@
 	<classpathentry kind="lib" path="C:/SoftwareAG/common/lib/ext/slf4j-api.jar"/>
 	<classpathentry kind="lib" path="C:/SoftwareAG/IntegrationServer/instances/default/lib/jars/custom/GCS_DSM.jar"/>
 	<classpathentry kind="var" path="ENTIREX_RUNTIME"/>
+	<classpathentry kind="lib" path="C:/SoftwareAG/common/lib/ext/jackson-annotations.jar"/>
+	<classpathentry kind="lib" path="C:/SoftwareAG/common/lib/ext/jackson-core.jar"/>
+	<classpathentry kind="lib" path="C:/SoftwareAG/common/lib/ext/jackson-databind.jar"/>
+	<classpathentry kind="lib" path="C:/SoftwareAG/common/lib/ext/jackson-dataformat-yaml.jar"/>
+	<classpathentry kind="lib" path="C:/SoftwareAG/common/lib/ext/jaxen.jar"/>
+	<classpathentry kind="lib" path="C:/SoftwareAG/common/lib/ext/jsch.jar"/>
+	<classpathentry kind="lib" path="C:/SoftwareAG/IntegrationServer/instances/default/lib/jars/custom/jackson-dataformat-xml-2.9.6.jar"/>
 	<classpathentry kind="output" path="code/classes"/>
 </classpath>
